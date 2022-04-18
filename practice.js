@@ -9,7 +9,7 @@ async function fetchFile(filePath){
     
 }
 // start the http server on port 8080
-fetchFile("http://127.0.0.1:8080/inventory.json")
+// fetchFile("http://127.0.0.1:8080/inventory.json")
 
 
 const data = [{
@@ -51,15 +51,31 @@ const data = [{
 //     Filter data having main denomination (dollar, pound, rupee) less than 30.
 function lessPriceData(){
     let newData = data.reduce((curr, pre) => {
-        if(Object.values(pre['price']['denomination'])[0]<30){
+        if(pre['price']['denomination']['dollar']<30 ||
+        pre['price']['denomination']['pound']<30 || 
+        pre['price']['denomination']['rupee']<30){
             curr.push(pre['price'])
         }
         return curr
     },[])
     console.log(newData)
 }
-
 // lessPriceData()
+
+
+
+function lessPriceDataUsingFilter(){
+    let newData = data.filter((ele) => {
+        if(ele['price']['denomination']['dollar']<30 ||
+         ele['price']['denomination']['pound']<30 || 
+         ele['price']['denomination']['rupee']<30){
+            return ele['price']
+        }  
+    })
+    console.log(newData)
+}
+
+// lessPriceDataUsingFilter()
 
 
 
@@ -80,7 +96,7 @@ function fetDenomination(){
 //     Make sure no references of data is copied.
 
 function copyWithoutRefrence(){
-    let clonedata = {...data}
+    let clonedata = JSON.parse(JSON.stringify(data))
     console.log(clonedata)
 }
 
