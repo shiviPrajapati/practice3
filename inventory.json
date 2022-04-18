@@ -1,0 +1,26 @@
+[
+    {
+        "item_name": "Watch",
+        "price": 399
+    },
+    {
+        "item_name": "Playstation",
+        "price": 499
+    },
+    {
+        "item_name": "ASUS MotherBoard",
+        "price": 899
+    },
+    {
+        "item_name": "Pressure Cooker",
+        "price": 130
+    },
+    {
+        "item_name": "Toothbrush",
+        "price": 19
+    },
+    {
+        "item_name": "Playing Cards",
+        "price": 23
+    }
+]

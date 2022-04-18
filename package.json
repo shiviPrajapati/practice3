@@ -1,0 +1,16 @@
+{
+  "name": "practice3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ppp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "node-fetch": "2.0"
+  }
+}
