@@ -94,10 +94,13 @@ function fetDenomination(){
 // Q4. 
 //     Copy data into another object.
 //     Make sure no references of data is copied.
-
 function copyWithoutRefrence(){
-    let clonedata = JSON.parse(JSON.stringify(data))
-    console.log(clonedata)
+    let newdata = data.map((ele) => {
+        let denom = ele.price.denomination;
+         return clonedata = {...ele,price: {...ele.price, denomination: {...denom}}}
+    })
+    
+    console.log(newdata)
 }
 
 // copyWithoutRefrence()
